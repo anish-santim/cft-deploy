@@ -2,9 +2,11 @@ AWSTemplateFormatVersion: '2010-09-09'
 Resources:
   S3Bucket:
     Type: 'AWS::S3::Bucket'
-  MyGlueDatabase:
-    Type: 'AWS::Glue::Database'
+  MySNSTopic:
+    Type: AWS::SNS::Topic
     Properties:
-      DatabaseInput:
-        Name: 'anish-glue-database'
+      TopicName: SampleTopic
+      Subscription:
+        - Endpoint: "anisimhkumar@gmail.com"
+          Protocol: "email"
   
