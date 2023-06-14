@@ -2,11 +2,3 @@ AWSTemplateFormatVersion: '2010-09-09'
 Resources:
   S3Bucket:
     Type: 'AWS::S3::Bucket'
-  MySNSTopic:
-    Type: AWS::SNS::Topic
-    Properties:
-      TopicName: SampleTopic
-      Subscription:
-        - Endpoint: "anisimhkumar@gmail.com"
-          Protocol: "email"
-  
